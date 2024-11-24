@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flowtide Notes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="light-theme">
+    <!-- Onboarding Panel -->
+    <div id="onboarding" class="hidden">
+        <h1>👋 hi, welcome to Flowtide Notes</h1>
+        <div class="theme-options">
+            <button class="theme-btn" data-theme="light">Light</button>
+            <button class="theme-btn" data-theme="dark">Dark</button>
+            <button class="theme-btn" data-theme="sepia">Sepia</button>
+        </div>
+        <button id="startButton" class="primary-btn">start taking notes →</button>
+    </div>
+
+    <!-- Main Content -->
+    <div id="mainContent">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2 class="no-select">notes</h2>
+                <button id="newNoteBtn" class="icon-btn" title="New note">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                </button>
+            </div>
+            <div id="notesList"></div>
+        </div>
+        
+        <div class="editor-container">
+            <div class="editor-header">
+                <input type="text" id="titleInput" placeholder="note title" disabled>
+                <button id="deleteBtn" class="icon-btn" title="delete note" disabled>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 6h18"></path>
+                        <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
+                        <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
+                    </svg>
+                </button>
+            </div>
+            <textarea id="editor" placeholder="start typing..." disabled></textarea>
+        </div>
+    </div>
+    
+    <script src="sidepanel.js"></script>
+</body>
+</html>

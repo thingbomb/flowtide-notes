@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Flowtide Notes - Minimalist Notepad",
+  "short_name": "Flowtide Notes",
+  "version": "1.0",
+  "description": "Beautifully crafted sidepanel for you to take notes anywhere.",
+  "permissions": [
+    "storage",
+    "unlimitedStorage",
+    "sidePanel",
+    "contextMenus"
+  ],
+  "side_panel": {
+    "default_path": "src/sidepanel.html"
+  },
+  "background": {
+    "service_worker": "src/background.js",
+    "type": "module"
+  },
+  "icons": {
+    "128": "assets/logo.png"
+  },
+  "action": {
+    "default_icon": {
+      "128": "assets/logo.png"
+    }
+  }
+}
